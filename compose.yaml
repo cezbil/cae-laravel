@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  webserver:
+    build:
+      dockerfile: ./docker/webserver/Dockerfile
+      context: .
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www
+      - ./public:/var/www/html
+      - ./docker/webserver/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./docker/webserver/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    network_mode: bridge
+    env_file:
+      - .env.example
+    environment:
+      PHP_IDE_CONFIG: serverName=localhost
