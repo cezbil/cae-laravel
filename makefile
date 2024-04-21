@@ -2,11 +2,7 @@ CMD=docker exec -it cae-laravel-webserver-1
 
 install:
 	@docker compose up --build --remove-orphans -d
-	@make env
 	@make composer-install
-	@make key-gen
-	@make config-clear
-	@make config-cache
 	@make migrate-database
 	@make chmod
 
@@ -15,6 +11,9 @@ create-database:
 
 migrate-database:
 	@$(CMD) bash -c "php artisan migrate"
+
+generate-migration:
+	@$(CMD) php artisan make:migration name=$(name)
 
 unit-tests:
 	@$(CMD) php artisan test
@@ -36,6 +35,7 @@ composer-install:
 
 chmod:
 	@$(CMD) bash -c "chmod -R 777 /var/www/storage"
+	@$(CMD) bash -c "chmod -R 777 /var/www/database/database.sqlite"
 
 env:
 	@$(CMD) bash -c "cp .env.example .env"
