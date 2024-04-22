@@ -10,11 +10,14 @@ or you can download postman api http://localhost/docs/collection.json
 
 run ``make install``
 
-## installation
+## tests
 
-run ``make test``
+run ``make unit-tests``
 
+### coverage
+included code is covered in 100%
 
+to check run ``make unit-tests-coverage``
 ## usage
 
 register->login->run import->run other endpoints

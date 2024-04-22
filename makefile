@@ -19,6 +19,9 @@ generate-migration:
 unit-tests:
 	@$(CMD) php artisan test
 
+unit-tests-coverage:
+	@$(CMD) php artisan test --coverage
+
 config-cache:
 	@$(CMD) php artisan config:cache
 
