@@ -9,7 +9,9 @@ use App\Domain\Event\Services\Command\Interfaces\HtmlEventParserInterface;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Event\CreateEventsFromHtmlRequest;
 use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\Authenticated;
 
+#[Authenticated]
 class CreateEventsFromHtmlController extends Controller
 {
     public function __construct(

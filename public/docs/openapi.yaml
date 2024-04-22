@@ -1,0 +1,336 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/events:
+    post:
+      summary: ''
+      operationId: postApiEvents
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-04-22T09:29:16'
+                revision:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: vudeilhh
+                dutyCode:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: m
+                checkInLocalTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                checkInZuluTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                checkOutLocalTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                checkOutZuluTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                activityType:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: t
+                activityRemark:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: owaqgldrt
+                fromStation:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: nfoicf
+                stdLocalTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                stdZuluTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                toStation:
+                  type: string
+                  description: 'Must not be greater than 10 characters.'
+                  example: zhgokahjyt
+                staLocalTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                staZuluTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                aircraftOrHotel:
+                  type: string
+                  description: 'Must not be greater than 50 characters.'
+                  example: fkrjdzdymppmpfgtgj
+                blockHours:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                flightTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                nightTime:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                duration:
+                  type: string
+                  description: 'Must be a valid date in the format <code>H:i</code>.'
+                  example: '09:29'
+                extraDetails:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: edopfnozebjlgchugsqki
+              required:
+                - date
+                - activityType
+  /api/events/import:
+    post:
+      summary: ''
+      operationId: postApiEventsImport
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                html_file:
+                  type: string
+                  format: binary
+                  description: 'Must be a file. Must not be greater than 5120 kilobytes.'
+              required:
+                - html_file
+  /api/events/range:
+    get:
+      summary: ''
+      operationId: getApiEventsRange
+      description: ''
+      parameters: []
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'not logged in'
+                properties:
+                  errors:
+                    type: string
+                    example: 'not logged in'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                startDate:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-04-22T09:29:17'
+                endDate:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2024-04-22T09:29:17'
+              required:
+                - startDate
+                - endDate
+  /api/events/flights:
+    get:
+      summary: ''
+      operationId: getApiEventsFlights
+      description: ''
+      parameters: []
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'not logged in'
+                properties:
+                  errors:
+                    type: string
+                    example: 'not logged in'
+      tags:
+        - Endpoints
+  /api/events/flights/location:
+    get:
+      summary: ''
+      operationId: getApiEventsFlightsLocation
+      description: ''
+      parameters:
+        -
+          in: query
+          name: startLocation
+          description: 'The start location'
+          example: nulla
+          required: true
+          schema:
+            type: string
+            description: 'The start location'
+            example: nulla
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'not logged in'
+                properties:
+                  errors:
+                    type: string
+                    example: 'not logged in'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                startLocation:
+                  type: string
+                  description: ''
+                  example: nesciunt
+              required:
+                - startLocation
+  /api/events/sby:
+    get:
+      summary: ''
+      operationId: getApiEventsSby
+      description: ''
+      parameters: []
+      responses:
+        422:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  errors: 'not logged in'
+                properties:
+                  errors:
+                    type: string
+                    example: 'not logged in'
+      tags:
+        - Endpoints
+  /api/auth/register:
+    post:
+      summary: ''
+      operationId: postApiAuthRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: dolorem
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: grayson.lind@example.net
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: 'g7iFr?~r=/tw'
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/auth/login:
+    post:
+      summary: ''
+      operationId: postApiAuthLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: rosenbaum.green@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: ',Q{C!L&9}V:%XXFxOe5'
+              required:
+                - email
+                - password
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: User
+    description: "\nfor user register"
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and Creating new user with Register, and then Loging in with login endpoint'
+security:
+  -
+    default: []

@@ -8,7 +8,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CaeRequest;
 use App\Http\Requests\Event\FindEventsByDateRangeRequest;
 use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\Authenticated;
 
+#[Authenticated]
 class FindFlightsForNextWeekController extends Controller
 {
     public function __construct(

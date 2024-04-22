@@ -6,7 +6,12 @@ use App\Domain\Event\Services\Query\GetFlightsService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Event\FindFlightsByStartLocationRequest;
 use Illuminate\Http\JsonResponse;
+use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\QueryParam;
+use Knuckles\Scribe\Attributes\UrlParam;
 
+#[Authenticated]
+#[QueryParam("startLocation", "string", "The start location", required: true)]
 class FindFlightsByStartLocationController extends Controller
 {
     public function __construct(
