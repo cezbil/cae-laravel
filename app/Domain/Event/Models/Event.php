@@ -6,9 +6,14 @@ namespace App\Domain\Event\Models;
 
 use App\Domain\Event\Enum\EventType;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Event extends Model
 {
+    const START_DATE = '14/01/2022';
+    const CURRENT_MONTH = '01';
+    const CURRENT_YEAR = '2022';
+
     protected $fillable = [
         'date',
         'revision',
@@ -40,7 +45,6 @@ class Event extends Model
      * @var array
      */
     protected $casts = [
-        'date' => 'date',
         'check_in_local' => 'datetime',
         'check_in_utc' => 'datetime',
         'check_out_local' => 'datetime',
@@ -55,5 +59,4 @@ class Event extends Model
     {
         $this->attributes['activity_type'] = EventType::tryFrom($value) ?? EventType::Unknown;
     }
-
 }

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Event;
 
 use App\Domain\Event\Exceptions\EventCreatedValidationFailedException;
 use App\Http\Requests\CaeRequest;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 
-class CreateUserRequest extends CaeRequest
+class CreateEventsFromHtmlRequest extends CaeRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,9 +26,11 @@ class CreateUserRequest extends CaeRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|string',
-            'email'=>'required|string|email|unique:users',
-            'password'=>'required|min:8'
+            'html_file' => ['required', 'file', 'mimes:html', 'max:5120'], // Accepts only HTML files up to 5 MB
         ];
+    }
+    protected function failedValidation(Validator $validator): void
+    {
+        throw new EventCreatedValidationFailedException(response()->json(['errors' => $validator->errors()], 422));
     }
 }

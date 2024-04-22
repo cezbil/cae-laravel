@@ -12,7 +12,7 @@ class CreateEventHandler extends CommandHandler
 {
     public function __construct(private EventRepository $eventRepository) {}
 
-    public function handle(CreateEventsFromHtml $command): void
+    public function handle(CreateEvent $command): void
     {
         $eventData = [
             'date' => $command->date,

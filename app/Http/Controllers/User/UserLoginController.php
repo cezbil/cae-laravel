@@ -13,7 +13,6 @@ class UserLoginController extends Controller
 {
     public function __construct(private readonly LoginUserService $loginUserService) {
     }
-
     public function __invoke(
         LoginUserRequest $request
     ): mixed {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Domain\Event\Services\Command;
 
 use App\Domain\Bus\Command\CommandBus;
-use App\Domain\Event\Command\CreateEvent\CreateEventsFromHtml;
+use App\Domain\Event\Command\CreateEvent\CreateEvent;
 
 class CreateEventService
 {
@@ -12,7 +12,7 @@ class CreateEventService
 
     public function createEvent(array $data): void
     {
-        $createEventCommand = new CreateEventsFromHtml(
+        $createEventCommand = new CreateEvent(
             date: $data['date'],
             revision: $data['revision'],
             dutyCode: $data['dutyCode'],

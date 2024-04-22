@@ -14,6 +14,8 @@ class CreateEventsFromHtmlHandler extends CommandHandler
 
     public function handle(CreateEventsFromHtml $command): void
     {
-        //TODO: handle
+        foreach ($command->getEvents() as $eventData) {
+            $this->eventRepository->save($eventData);
+        }
     }
 }
