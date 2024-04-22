@@ -11,7 +11,6 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class CrewConnexHtmlEventParser implements HtmlEventParserInterface
 {
-    public const START_DATE = '14/01/2022';
     public const CURRENT_MONTH = '01';
     public const CURRENT_YEAR = '2022';
     /**

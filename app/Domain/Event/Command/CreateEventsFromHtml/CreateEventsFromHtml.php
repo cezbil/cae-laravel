@@ -27,14 +27,4 @@ class CreateEventsFromHtml extends Command
     {
         return $this->events;
     }
-
-    /**
-     * @param  array  $events
-     *
-     * @return void
-     */
-    public function setEvents(array $events): void
-    {
-        $this->events = $events;
-    }
 }

@@ -49,9 +49,4 @@ class Event extends Model
         'scheduled_time_arrival_local' => 'datetime',
         'scheduled_time_arrival_utc' => 'datetime'
     ];
-
-    public function setActivityTypeAttribute($value): void
-    {
-        $this->attributes['activity_type'] = EventType::tryFrom($value) ?? EventType::Unknown;
-    }
 }

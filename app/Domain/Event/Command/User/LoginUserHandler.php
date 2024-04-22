@@ -3,11 +3,12 @@
 namespace App\Domain\Event\Command\User;
 
 use App\Domain\Bus\Command\CommandBus;
+use App\Domain\Bus\Command\CommandHandler;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 
-class LoginUserHandler extends CommandBus
+class LoginUserHandler extends CommandHandler
 {
     public function handle(LoginUser $command): JsonResponse
     {

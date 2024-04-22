@@ -3,11 +3,12 @@
 namespace App\Domain\Event\Command\User;
 
 use App\Domain\Bus\Command\CommandBus;
+use App\Domain\Bus\Command\CommandHandler;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 
-class CreateUserHandler extends CommandBus
+class CreateUserHandler extends CommandHandler
 {
     public function handle(CreateUser $command): JsonResponse
     {
@@ -18,7 +19,7 @@ class CreateUserHandler extends CommandBus
         ]);
 
         return response()->json([
-            'message' => 'User Created ',
+            'message' => 'User Created',
         ]);
     }
 }

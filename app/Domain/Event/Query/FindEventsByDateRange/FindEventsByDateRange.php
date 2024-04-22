@@ -17,18 +17,8 @@ class FindEventsByDateRange extends Query
         return $this->startDate;
     }
 
-    public function setStartDate(\DateTimeImmutable $startDate): void
-    {
-        $this->startDate = $startDate;
-    }
-
     public function getEndDate(): \DateTimeImmutable
     {
         return $this->endDate;
-    }
-
-    public function setEndDate(\DateTimeImmutable $endDate): void
-    {
-        $this->endDate = $endDate;
     }
 }

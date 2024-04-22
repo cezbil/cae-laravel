@@ -16,9 +16,4 @@ class FindFlightsByStartLocation extends Query
     {
         return $this->startLocation;
     }
-
-    public function setStartLocation(string $startLocation): void
-    {
-        $this->startLocation = $startLocation;
-    }
 }
