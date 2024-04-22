@@ -1,5 +1,5 @@
 CMD=docker exec -it cae-laravel-webserver-1
-
+# cae-laravel-webserver-1 change this if tou change directory name
 install:
 	@docker compose up --build --remove-orphans -d
 	@make composer-install
@@ -29,6 +29,12 @@ cache-clear:
 
 key-gen:
 	@$(CMD) php artisan key:generate
+
+ecs:
+	@$(CMD) vendor/bin/ecs
+
+ecs-fix:
+	@$(CMD) vendor/bin/ecs --fix
 
 composer-install:
 	@$(CMD) bash -c "export XDEBUG_MODE=off && composer install --no-interaction"

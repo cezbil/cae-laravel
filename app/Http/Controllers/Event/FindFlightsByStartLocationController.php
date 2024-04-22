@@ -8,7 +8,6 @@ use App\Http\Requests\Event\FindFlightsByStartLocationRequest;
 use Illuminate\Http\JsonResponse;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\QueryParam;
-use Knuckles\Scribe\Attributes\UrlParam;
 
 #[Authenticated]
 #[QueryParam("startLocation", "string", "The start location", required: true)]
@@ -26,4 +25,3 @@ class FindFlightsByStartLocationController extends Controller
         return response()->json($this->flightsService->getFlightsFromStartLocation($validatedData['startLocation']));
     }
 }
-

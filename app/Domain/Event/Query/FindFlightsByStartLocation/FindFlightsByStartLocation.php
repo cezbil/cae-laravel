@@ -21,5 +21,4 @@ class FindFlightsByStartLocation extends Query
     {
         $this->startLocation = $startLocation;
     }
-
 }

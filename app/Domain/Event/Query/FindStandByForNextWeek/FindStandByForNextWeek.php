@@ -8,5 +8,4 @@ use App\Domain\Bus\Query\Query;
 
 class FindStandByForNextWeek extends Query
 {
-
 }

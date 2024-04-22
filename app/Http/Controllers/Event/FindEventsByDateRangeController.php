@@ -23,4 +23,3 @@ class FindEventsByDateRangeController extends Controller
         return response()->json($this->getEventsByDateRangeService->getEventsByDateRange($validatedData));
     }
 }
-

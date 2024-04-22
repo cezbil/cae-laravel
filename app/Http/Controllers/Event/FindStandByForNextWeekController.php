@@ -21,4 +21,3 @@ class FindStandByForNextWeekController extends Controller
         return response()->json($this->standByService->getStandByForNextWeek());
     }
 }
-

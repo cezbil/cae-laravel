@@ -2,10 +2,8 @@
 
 namespace App\Http\Requests\Event;
 
-use App\Domain\Event\Exceptions\EventCreatedValidationFailedException;
 use App\Http\Requests\CaeRequest;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Contracts\Validation\Validator;
 
 class FindFlightsByStartLocationRequest extends CaeRequest
 {
