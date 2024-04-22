@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Domain\Bus\Command\CommandBus;
 use App\Domain\Bus\Interfaces\CommandBus as CB;
 use App\Domain\Bus\Interfaces\QueryBus as QB;
+use App\Domain\Bus\Query\QueryBus;
 use App\Domain\Event\Command\CreateEvent\CreateEvent;
 use App\Domain\Event\Command\CreateEvent\CreateEventHandler;
 use App\Domain\Event\Command\CreateEventsFromHtml\CreateEventsFromHtml;
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $singletons = [
             CB::class => CommandBus::class,
+            QB::class => QueryBus::class,
         ];
         foreach ($singletons as $abstract => $concrete) {
             $this->app->singleton(

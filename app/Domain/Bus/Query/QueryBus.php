@@ -10,16 +10,16 @@ use Illuminate\Bus\Dispatcher;
 class QueryBus implements QB
 {
     public function __construct(
-        protected Dispatcher $commandBus,
+        protected Dispatcher $queryBus,
     ) {
     }
     public function ask(Query $query): mixed
     {
-        return $this->commandBus->dispatch($query);
+        return $this->queryBus->dispatch($query);
     }
 
     public function register(array $map): void
     {
-        $this->commandBus->map($map);
+        $this->queryBus->map($map);
     }
 }
