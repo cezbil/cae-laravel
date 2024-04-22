@@ -15,13 +15,16 @@ class EventRepository implements EventRepositoryInterface
 
     public function findById(int $id): ?Event
     {
-        // TODO: Implement findById() method.
+        return Event::find($id);
     }
 
     public function findByDateRange(
         \DateTimeImmutable $start,
         \DateTimeImmutable $end
     ): array {
-        // TODO: Implement findByDateRange() method.
+        return Event::where('date', '>=', $start->format('Y-m-d'))
+            ->where('date', '<=', $end->format('Y-m-d'))
+            ->get()
+            ->all();
     }
 }

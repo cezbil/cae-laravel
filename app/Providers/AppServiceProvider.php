@@ -13,6 +13,8 @@ use App\Domain\Event\Command\User\CreateUser;
 use App\Domain\Event\Command\User\CreateUserHandler;
 use App\Domain\Event\Command\User\LoginUser;
 use App\Domain\Event\Command\User\LoginUserHandler;
+use App\Domain\Event\Query\FindEventsByDateRange\FindEventsByDateRange;
+use App\Domain\Event\Query\FindEventsByDateRange\FindEventsByDateRangeHandler;
 use App\Domain\Event\Services\Command\Interfaces\HtmlEventParserInterface;
 use App\Infrastructure\Command\Parsing\CrewConnexHtmlEventParser;
 use Illuminate\Support\ServiceProvider;
@@ -55,8 +57,10 @@ class AppServiceProvider extends ServiceProvider
             CreateEventsFromHtml::class            => CreateEventsFromHtmlHandler::class,
         ]);
 
-//        $queryBus = app(QB::class);
-//
-//        $queryBus->register([]);
+        $queryBus = app(QB::class);
+
+        $queryBus->register([
+            FindEventsByDateRange::class => FindEventsByDateRangeHandler::class
+        ]);
     }
 }

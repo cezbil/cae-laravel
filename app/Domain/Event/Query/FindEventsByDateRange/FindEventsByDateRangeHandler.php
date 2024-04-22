@@ -11,7 +11,9 @@ class FindEventsByDateRangeHandler
 
     public function handle(FindEventsByDateRange $query): array
     {
-        //TODO: Logic to handle query, use $repository
-        return [];
+        return $this->repository->findByDateRange(
+            $query->startDate,
+            $query->endDate
+        );
     }
 }
