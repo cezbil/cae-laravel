@@ -9,10 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    public const START_DATE = '14/01/2022';
-    public const CURRENT_MONTH = '01';
-    public const CURRENT_YEAR = '2022';
-
     protected $fillable = [
         'date',
         'revision',
