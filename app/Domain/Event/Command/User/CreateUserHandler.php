@@ -2,7 +2,6 @@
 
 namespace App\Domain\Event\Command\User;
 
-
 use App\Domain\Bus\Command\CommandBus;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;

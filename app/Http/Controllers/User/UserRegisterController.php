@@ -9,7 +9,8 @@ use Illuminate\Http\JsonResponse;
 
 class UserRegisterController extends Controller
 {
-    public function __construct(private readonly CreateUserService $createUserService) {
+    public function __construct(private readonly CreateUserService $createUserService)
+    {
     }
 
     public function __invoke(

@@ -1,8 +1,8 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Domain\Bus\Interfaces;
-
 
 use App\Domain\Bus\Query\Query;
 

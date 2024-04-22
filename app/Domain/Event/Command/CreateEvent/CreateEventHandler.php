@@ -10,7 +10,9 @@ use App\Domain\Event\Repositories\EventRepository;
 
 class CreateEventHandler extends CommandHandler
 {
-    public function __construct(private EventRepository $eventRepository) {}
+    public function __construct(private EventRepository $eventRepository)
+    {
+    }
 
     public function handle(CreateEvent $command): void
     {

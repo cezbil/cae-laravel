@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Infrastructure\Command\Parsing;
@@ -10,9 +11,9 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class CrewConnexHtmlEventParser implements HtmlEventParserInterface
 {
-    const START_DATE = '14/01/2022';
-    const CURRENT_MONTH = '01';
-    const CURRENT_YEAR = '2022';
+    public const START_DATE = '14/01/2022';
+    public const CURRENT_MONTH = '01';
+    public const CURRENT_YEAR = '2022';
     /**
      * @inheritDoc
      */

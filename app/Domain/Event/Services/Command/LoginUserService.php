@@ -3,14 +3,13 @@
 namespace App\Domain\Event\Services\Command;
 
 use App\Domain\Bus\Command\CommandBus;
-use App\Domain\Event\Command\CreateEvent\CreateEventsFromHtml;
-use App\Domain\Event\Command\User\CreateUser;
 use App\Domain\Event\Command\User\LoginUser;
-use Illuminate\Http\JsonResponse;
 
 class LoginUserService
 {
-    public function __construct(private readonly CommandBus $commandBus) {}
+    public function __construct(private readonly CommandBus $commandBus)
+    {
+    }
 
     public function loginUser(array $data): mixed
     {
@@ -21,5 +20,4 @@ class LoginUserService
 
         return $this->commandBus->dispatch($loginUserCommand);
     }
-
 }

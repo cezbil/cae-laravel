@@ -1,12 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
-use App\Domain\Event\Exceptions\EventCreatedValidationFailedException;
 use App\Http\Requests\CaeRequest;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Illuminate\Contracts\Validation\Validator;
 
 class CreateUserRequest extends CaeRequest
 {
@@ -26,9 +25,9 @@ class CreateUserRequest extends CaeRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|string',
-            'email'=>'required|string|email|unique:users',
-            'password'=>'required|min:8'
+            'name' => 'required|string',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|min:8'
         ];
     }
 }

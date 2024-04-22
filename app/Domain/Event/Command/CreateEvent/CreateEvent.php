@@ -30,7 +30,8 @@ class CreateEvent extends Command
         public ?string $nightTime,
         public ?string $duration,
         public ?string $extraDetails
-    ) {}
+    ) {
+    }
 
     public function getDate(): string
     {

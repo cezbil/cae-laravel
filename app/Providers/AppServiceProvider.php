@@ -52,9 +52,9 @@ class AppServiceProvider extends ServiceProvider
 
         $commandBus->register([
             CreateEvent::class => CreateEventHandler::class,
-            CreateUser::class           => CreateUserHandler::class,
-            LoginUser::class            => LoginUserHandler::class,
-            CreateEventsFromHtml::class            => CreateEventsFromHtmlHandler::class,
+            CreateUser::class => CreateUserHandler::class,
+            LoginUser::class => LoginUserHandler::class,
+            CreateEventsFromHtml::class => CreateEventsFromHtmlHandler::class,
         ]);
 
         $queryBus = app(QB::class);

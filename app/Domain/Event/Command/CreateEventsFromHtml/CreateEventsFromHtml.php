@@ -17,7 +17,8 @@ class CreateEventsFromHtml extends Command
      */
     public function __construct(
         public array $events,
-    ) {}
+    ) {
+    }
 
     /**
      * @return Event[]
@@ -36,5 +37,4 @@ class CreateEventsFromHtml extends Command
     {
         $this->events = $events;
     }
-
 }

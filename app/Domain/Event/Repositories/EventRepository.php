@@ -3,11 +3,9 @@
 namespace App\Domain\Event\Repositories;
 
 use App\Domain\Event\Models\Event;
-use App\Domain\Event\Repositories\EventRepositoryInterface;
 
 class EventRepository implements EventRepositoryInterface
 {
-
     public function save(Event $event): void
     {
         $event->save();

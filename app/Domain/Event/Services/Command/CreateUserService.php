@@ -7,7 +7,9 @@ use App\Domain\Event\Command\User\CreateUser;
 
 class CreateUserService
 {
-    public function __construct(private readonly CommandBus $commandBus) {}
+    public function __construct(private readonly CommandBus $commandBus)
+    {
+    }
 
     public function createUser(array $data): void
     {
@@ -19,5 +21,4 @@ class CreateUserService
 
         $this->commandBus->dispatch($createUserCommand);
     }
-
 }

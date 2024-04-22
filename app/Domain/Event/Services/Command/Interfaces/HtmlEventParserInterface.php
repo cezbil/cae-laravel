@@ -14,5 +14,4 @@ interface HtmlEventParserInterface
      * @return array<Event>
      */
     public function parse(UploadedFile $html): array;
-
 }

@@ -10,7 +10,8 @@ class CreateUser extends Command
         public string $name,
         public string $email,
         public string $password
-    ) {}
+    ) {
+    }
 
     public function getName(): string
     {
@@ -41,5 +42,4 @@ class CreateUser extends Command
     {
         $this->password = $password;
     }
-
 }

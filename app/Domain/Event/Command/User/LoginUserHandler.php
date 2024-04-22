@@ -2,7 +2,6 @@
 
 namespace App\Domain\Event\Command\User;
 
-
 use App\Domain\Bus\Command\CommandBus;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
@@ -12,14 +11,14 @@ class LoginUserHandler extends CommandBus
 {
     public function handle(LoginUser $command): JsonResponse
     {
-        $user = User::where('email',$command->getEmail())->first();
+        $user = User::where('email', $command->getEmail())->first();
 
-        if(!$user || !Hash::check($command->getPassword(), $user->password)){
+        if (!$user || !Hash::check($command->getPassword(), $user->password)) {
             return response()->json([
                 'message' => 'Invalid Credentials'
-            ],401);
+            ], 401);
         }
-        $token = $user->createToken($user->name.'-AuthToken')->plainTextToken;
+        $token = $user->createToken($user->name . '-AuthToken')->plainTextToken;
         return response()->json([
             'access_token' => $token,
         ]);

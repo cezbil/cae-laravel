@@ -1,15 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Http\Controllers\Event;
 
-use App\Domain\Event\Command\CreateEventsFromHtml\CreateEventsFromHtml;
 use App\Domain\Event\Services\Command\CreateEventsFromHtmlService;
 use App\Domain\Event\Services\Command\Interfaces\HtmlEventParserInterface;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Event\CreateEventRequest;
 use App\Http\Requests\Event\CreateEventsFromHtmlRequest;
-use App\Infrastructure\Command\Parsing\CrewConnexHtmlEventParser;
 use Illuminate\Http\JsonResponse;
 
 class CreateEventsFromHtmlController extends Controller

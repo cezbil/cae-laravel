@@ -1,16 +1,18 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Domain\Bus\Command;
 
+use App\Domain\Bus\Interfaces\CommandBus as CB;
 use Illuminate\Bus\Dispatcher;
-use \App\Domain\Bus\Interfaces\CommandBus as CB;
 
 class CommandBus implements CB
 {
     public function __construct(
         protected Dispatcher $commandBus,
-    ) {}
+    ) {
+    }
     public function dispatch(Command $command): mixed
     {
         return $this->commandBus->dispatch($command);
