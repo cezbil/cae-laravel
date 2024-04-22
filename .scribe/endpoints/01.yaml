@@ -30,7 +30,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: dolorem
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -39,7 +39,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: grayson.lind@example.net
+        example: hermiston.lemuel@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -48,15 +48,15 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: 'g7iFr?~r=/tw'
+        example: 'h&/N;;'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: dolorem
-      email: grayson.lind@example.net
-      password: 'g7iFr?~r=/tw'
+      name: non
+      email: hermiston.lemuel@example.net
+      password: 'h&/N;;'
     fileParameters: []
     responses: []
     responseFields: []
@@ -92,7 +92,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: rosenbaum.green@example.org
+        example: schaefer.brendan@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -101,14 +101,14 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: ',Q{C!L&9}V:%XXFxOe5'
+        example: '>xfd~r\83Ck$&Dqhom_'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: rosenbaum.green@example.org
-      password: ',Q{C!L&9}V:%XXFxOe5'
+      email: schaefer.brendan@example.org
+      password: '>xfd~r\83Ck$&Dqhom_'
     fileParameters: []
     responses: []
     responseFields: []

@@ -26,87 +26,87 @@ paths:
                 date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-04-22T09:29:16'
+                  example: '2024-04-22T13:47:26'
                 revision:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: vudeilhh
+                  example: rboie
                 dutyCode:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: m
+                  example: thhtw
                 checkInLocalTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 checkInZuluTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 checkOutLocalTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 checkOutZuluTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 activityType:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: t
+                  example: qr
                 activityRemark:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: owaqgldrt
+                  example: jni
                 fromStation:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: nfoicf
+                  example: pbrwg
                 stdLocalTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 stdZuluTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 toStation:
                   type: string
                   description: 'Must not be greater than 10 characters.'
-                  example: zhgokahjyt
+                  example: axhvn
                 staLocalTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 staZuluTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 aircraftOrHotel:
                   type: string
                   description: 'Must not be greater than 50 characters.'
-                  example: fkrjdzdymppmpfgtgj
+                  example: vg
                 blockHours:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 flightTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 nightTime:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 duration:
                   type: string
                   description: 'Must be a valid date in the format <code>H:i</code>.'
-                  example: '09:29'
+                  example: '13:47'
                 extraDetails:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: edopfnozebjlgchugsqki
+                  example: nni
               required:
                 - date
                 - activityType
@@ -137,7 +137,27 @@ paths:
       summary: ''
       operationId: getApiEventsRange
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: query
+          name: startDate
+          description: 'The start date'
+          example: '2024-04-22T13:43:11'
+          required: true
+          schema:
+            type: string
+            description: 'The start date'
+            example: '2024-04-22T13:43:11'
+        -
+          in: query
+          name: endDate
+          description: 'The start date'
+          example: '2024-04-22T13:43:11'
+          required: true
+          schema:
+            type: string
+            description: 'The start date'
+            example: '2024-04-22T13:43:11'
       responses:
         422:
           description: ''
@@ -163,11 +183,11 @@ paths:
                 startDate:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-04-22T09:29:17'
+                  example: '2024-04-22T13:47:26'
                 endDate:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2024-04-22T09:29:17'
+                  example: '2024-04-22T13:47:26'
               required:
                 - startDate
                 - endDate
@@ -202,12 +222,12 @@ paths:
           in: query
           name: startLocation
           description: 'The start location'
-          example: nulla
+          example: non
           required: true
           schema:
             type: string
             description: 'The start location'
-            example: nulla
+            example: non
       responses:
         422:
           description: ''
@@ -233,7 +253,7 @@ paths:
                 startLocation:
                   type: string
                   description: ''
-                  example: nesciunt
+                  example: officia
               required:
                 - startLocation
   /api/events/sby:
@@ -276,15 +296,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: dolorem
+                  example: non
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: grayson.lind@example.net
+                  example: hermiston.lemuel@example.net
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'g7iFr?~r=/tw'
+                  example: 'h&/N;;'
               required:
                 - name
                 - email
@@ -309,11 +329,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: rosenbaum.green@example.org
+                  example: schaefer.brendan@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: ',Q{C!L&9}V:%XXFxOe5'
+                  example: '>xfd~r\83Ck$&Dqhom_'
               required:
                 - email
                 - password

@@ -27,7 +27,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2024-04-22T09:29:16'
+        example: '2024-04-22T13:47:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -36,7 +36,7 @@ endpoints:
         name: revision
         description: 'Must not be greater than 10 characters.'
         required: false
-        example: vudeilhh
+        example: rboie
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -45,7 +45,7 @@ endpoints:
         name: dutyCode
         description: 'Must not be greater than 10 characters.'
         required: false
-        example: m
+        example: thhtw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -54,7 +54,7 @@ endpoints:
         name: checkInLocalTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -63,7 +63,7 @@ endpoints:
         name: checkInZuluTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -72,7 +72,7 @@ endpoints:
         name: checkOutLocalTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -81,7 +81,7 @@ endpoints:
         name: checkOutZuluTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -90,7 +90,7 @@ endpoints:
         name: activityType
         description: 'Must not be greater than 10 characters.'
         required: true
-        example: t
+        example: qr
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -99,7 +99,7 @@ endpoints:
         name: activityRemark
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: owaqgldrt
+        example: jni
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -108,7 +108,7 @@ endpoints:
         name: fromStation
         description: 'Must not be greater than 10 characters.'
         required: false
-        example: nfoicf
+        example: pbrwg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -117,7 +117,7 @@ endpoints:
         name: stdLocalTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -126,7 +126,7 @@ endpoints:
         name: stdZuluTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -135,7 +135,7 @@ endpoints:
         name: toStation
         description: 'Must not be greater than 10 characters.'
         required: false
-        example: zhgokahjyt
+        example: axhvn
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -144,7 +144,7 @@ endpoints:
         name: staLocalTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -153,7 +153,7 @@ endpoints:
         name: staZuluTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -162,7 +162,7 @@ endpoints:
         name: aircraftOrHotel
         description: 'Must not be greater than 50 characters.'
         required: false
-        example: fkrjdzdymppmpfgtgj
+        example: vg
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -171,7 +171,7 @@ endpoints:
         name: blockHours
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -180,7 +180,7 @@ endpoints:
         name: flightTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -189,7 +189,7 @@ endpoints:
         name: nightTime
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -198,7 +198,7 @@ endpoints:
         name: duration
         description: 'Must be a valid date in the format <code>H:i</code>.'
         required: false
-        example: '09:29'
+        example: '13:47'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -207,40 +207,40 @@ endpoints:
         name: extraDetails
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: edopfnozebjlgchugsqki
+        example: nni
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      date: '2024-04-22T09:29:16'
-      revision: vudeilhh
-      dutyCode: m
-      checkInLocalTime: '09:29'
-      checkInZuluTime: '09:29'
-      checkOutLocalTime: '09:29'
-      checkOutZuluTime: '09:29'
-      activityType: t
-      activityRemark: owaqgldrt
-      fromStation: nfoicf
-      stdLocalTime: '09:29'
-      stdZuluTime: '09:29'
-      toStation: zhgokahjyt
-      staLocalTime: '09:29'
-      staZuluTime: '09:29'
-      aircraftOrHotel: fkrjdzdymppmpfgtgj
-      blockHours: '09:29'
-      flightTime: '09:29'
-      nightTime: '09:29'
-      duration: '09:29'
-      extraDetails: edopfnozebjlgchugsqki
+      date: '2024-04-22T13:47:26'
+      revision: rboie
+      dutyCode: thhtw
+      checkInLocalTime: '13:47'
+      checkInZuluTime: '13:47'
+      checkOutLocalTime: '13:47'
+      checkOutZuluTime: '13:47'
+      activityType: qr
+      activityRemark: jni
+      fromStation: pbrwg
+      stdLocalTime: '13:47'
+      stdZuluTime: '13:47'
+      toStation: axhvn
+      staLocalTime: '13:47'
+      staZuluTime: '13:47'
+      aircraftOrHotel: vg
+      blockHours: '13:47'
+      flightTime: '13:47'
+      nightTime: '13:47'
+      duration: '13:47'
+      extraDetails: nni
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer VD4badkhP6vfcEZ3e8g65a1'
+      - 'Bearer bcg16eavP8d345DEhZf6kVa'
     controller: null
     method: null
     route: null
@@ -284,7 +284,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8dvgf1V4Eca63Zk5Pbh6eDa'
+      - 'Bearer fPVDag166hZvkd53ebc4Ea8'
     controller: null
     method: null
     route: null
@@ -308,14 +308,34 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      startDate:
+        name: startDate
+        description: 'The start date'
+        required: true
+        example: '2024-04-22T13:43:11'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+      endDate:
+        name: endDate
+        description: 'The start date'
+        required: true
+        example: '2024-04-22T13:43:11'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      startDate: '2024-04-22T13:43:11'
+      endDate: '2024-04-22T13:43:11'
     bodyParameters:
       startDate:
         name: startDate
         description: 'Must be a valid date.'
         required: true
-        example: '2024-04-22T09:29:17'
+        example: '2024-04-22T13:47:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -324,14 +344,14 @@ endpoints:
         name: endDate
         description: 'Must be a valid date.'
         required: true
-        example: '2024-04-22T09:29:17'
+        example: '2024-04-22T13:47:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      startDate: '2024-04-22T09:29:17'
-      endDate: '2024-04-22T09:29:17'
+      startDate: '2024-04-22T13:47:26'
+      endDate: '2024-04-22T13:47:26'
     fileParameters: []
     responses:
       -
@@ -347,7 +367,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ePa6a368hbfkdcv5E4ZV1gD'
+      - 'Bearer 1Dhv4ka3E6e8VdZgc5fbP6a'
     controller: null
     method: null
     route: null
@@ -390,7 +410,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 63EZ5a1Dabv4hcdePVf6kg8'
+      - 'Bearer Veb5aD1h6aZg8ckdP346Efv'
     controller: null
     method: null
     route: null
@@ -419,25 +439,25 @@ endpoints:
         name: startLocation
         description: 'The start location'
         required: true
-        example: nulla
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanQueryParameters:
-      startLocation: nulla
+      startLocation: non
     bodyParameters:
       startLocation:
         name: startLocation
         description: ''
         required: true
-        example: nesciunt
+        example: officia
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      startLocation: nesciunt
+      startLocation: officia
     fileParameters: []
     responses:
       -
@@ -453,7 +473,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer av816fe3Z6ag4h5DPEbdcVk'
+      - 'Bearer aP3f8cDvaEe56V64bdgkh1Z'
     controller: null
     method: null
     route: null
@@ -496,7 +516,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1daZD346685VgbveEcPhafk'
+      - 'Bearer dve5aa64kE8V1Zg6c3hfbDP'
     controller: null
     method: null
     route: null

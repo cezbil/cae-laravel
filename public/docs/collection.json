@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "beaef768-cb14-4f7c-bed3-fcd1e8ee3783",
+        "_postman_id": "bced537d-46c8-4251-84d8-fceb116abae3",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"date\":\"2024-04-22T09:29:16\",\"revision\":\"vudeilhh\",\"dutyCode\":\"m\",\"checkInLocalTime\":\"09:29\",\"checkInZuluTime\":\"09:29\",\"checkOutLocalTime\":\"09:29\",\"checkOutZuluTime\":\"09:29\",\"activityType\":\"t\",\"activityRemark\":\"owaqgldrt\",\"fromStation\":\"nfoicf\",\"stdLocalTime\":\"09:29\",\"stdZuluTime\":\"09:29\",\"toStation\":\"zhgokahjyt\",\"staLocalTime\":\"09:29\",\"staZuluTime\":\"09:29\",\"aircraftOrHotel\":\"fkrjdzdymppmpfgtgj\",\"blockHours\":\"09:29\",\"flightTime\":\"09:29\",\"nightTime\":\"09:29\",\"duration\":\"09:29\",\"extraDetails\":\"edopfnozebjlgchugsqki\"}"
+                            "raw": "{\"date\":\"2024-04-22T13:47:26\",\"revision\":\"rboie\",\"dutyCode\":\"thhtw\",\"checkInLocalTime\":\"13:47\",\"checkInZuluTime\":\"13:47\",\"checkOutLocalTime\":\"13:47\",\"checkOutZuluTime\":\"13:47\",\"activityType\":\"qr\",\"activityRemark\":\"jni\",\"fromStation\":\"pbrwg\",\"stdLocalTime\":\"13:47\",\"stdZuluTime\":\"13:47\",\"toStation\":\"axhvn\",\"staLocalTime\":\"13:47\",\"staZuluTime\":\"13:47\",\"aircraftOrHotel\":\"vg\",\"blockHours\":\"13:47\",\"flightTime\":\"13:47\",\"nightTime\":\"13:47\",\"duration\":\"13:47\",\"extraDetails\":\"nni\"}"
                         },
                         "description": ""
                     },
@@ -87,8 +87,21 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/events\/range",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/events\/range"
+                            "query": [
+                                {
+                                    "key": "startDate",
+                                    "value": "2024-04-22T13%3A43%3A11",
+                                    "description": "The start date",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "endDate",
+                                    "value": "2024-04-22T13%3A43%3A11",
+                                    "description": "The start date",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/events\/range?startDate=2024-04-22T13%3A43%3A11&endDate=2024-04-22T13%3A43%3A11"
                         },
                         "method": "GET",
                         "header": [
@@ -103,7 +116,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"startDate\":\"2024-04-22T09:29:17\",\"endDate\":\"2024-04-22T09:29:17\"}"
+                            "raw": "{\"startDate\":\"2024-04-22T13:47:26\",\"endDate\":\"2024-04-22T13:47:26\"}"
                         },
                         "description": ""
                     },
@@ -183,12 +196,12 @@
                             "query": [
                                 {
                                     "key": "startLocation",
-                                    "value": "nulla",
+                                    "value": "non",
                                     "description": "The start location",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/events\/flights\/location?startLocation=nulla"
+                            "raw": "{{baseUrl}}\/api\/events\/flights\/location?startLocation=non"
                         },
                         "method": "GET",
                         "header": [
@@ -203,7 +216,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"startLocation\":\"nesciunt\"}"
+                            "raw": "{\"startLocation\":\"officia\"}"
                         },
                         "description": ""
                     },
@@ -306,7 +319,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"name\":\"dolorem\",\"email\":\"grayson.lind@example.net\",\"password\":\"g7iFr?~r=\\\/tw\"}"
+                                    "raw": "{\"name\":\"non\",\"email\":\"hermiston.lemuel@example.net\",\"password\":\"h&\\\/N;;\"}"
                                 },
                                 "description": "",
                                 "auth": {
@@ -343,7 +356,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"email\":\"rosenbaum.green@example.org\",\"password\":\",Q{C!L&9}V:%XXFxOe5\"}"
+                                    "raw": "{\"email\":\"schaefer.brendan@example.org\",\"password\":\">xfd~r\\\\83Ck$&Dqhom_\"}"
                                 },
                                 "description": "",
                                 "auth": {
