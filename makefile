@@ -2,6 +2,7 @@ CMD=docker exec -it cae-laravel-webserver-1
 # cae-laravel-webserver-1 change this if tou change directory name
 install:
 	@docker compose up --build --remove-orphans -d
+	@make env
 	@make composer-install
 	@make migrate-database
 	@make chmod
