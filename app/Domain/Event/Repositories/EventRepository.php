@@ -2,6 +2,7 @@
 
 namespace App\Domain\Event\Repositories;
 
+use App\Domain\Event\Enum\EventType;
 use App\Domain\Event\Models\Event;
 use Carbon\Carbon;
 
@@ -31,6 +32,7 @@ class EventRepository implements EventRepositoryInterface
 
     public function findFlightsNextWeek(): array
     {
+        // assuming next week is start date +7
         $currentDate = new Carbon(self::START_DATE);
         $nextWeekStart = $currentDate->copy()->addWeek();
         $nextWeekEnd = $nextWeekStart->copy()->endOfWeek();
@@ -39,10 +41,40 @@ class EventRepository implements EventRepositoryInterface
             ->where('date', '<=', $nextWeekEnd->format('Y-m-d'))
             ->get();
 
-        $filteredEvents = $events->filter(function ($event) {
+        return $this->getFlights($events)->all();
+    }
+    public function findStandByNextWeek(): array
+    {
+        // assuming next week is start date +7
+        $currentDate = new Carbon(self::START_DATE);
+        $nextWeekStart = $currentDate->copy()->addWeek();
+        $nextWeekEnd = $nextWeekStart->copy()->endOfWeek();
+
+        $events = Event::where('date', '>=', $nextWeekStart->format('Y-m-d'))
+            ->where('date', '<=', $nextWeekEnd->format('Y-m-d'))
+            ->where('activity', '=', EventType::Standby->value)
+            ->get();
+
+        return $events->all();
+    }
+
+    public function findFlightsByStartLocation(string $startLocation): array
+    {
+        $events = Event::where('from_station', '=', $startLocation)
+            ->get();
+
+        return $this->getFlights($events)->all();
+    }
+
+    /**
+     * @param $events
+     *
+     * @return mixed
+     */
+    public function getFlights($events)
+    {
+        return $events->filter(function ($event) {
             return preg_match('/^[A-Z]{2}\d+$/', $event->activity);
         });
-
-        return $filteredEvents->all();
     }
 }

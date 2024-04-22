@@ -16,8 +16,12 @@ use App\Domain\Event\Command\User\LoginUser;
 use App\Domain\Event\Command\User\LoginUserHandler;
 use App\Domain\Event\Query\FindEventsByDateRange\FindEventsByDateRange;
 use App\Domain\Event\Query\FindEventsByDateRange\FindEventsByDateRangeHandler;
+use App\Domain\Event\Query\FindFlightsByStartLocation\FindFlightsByStartLocation;
+use App\Domain\Event\Query\FindFlightsByStartLocation\FindFlightsByStartLocationHandler;
 use App\Domain\Event\Query\FindFlightsForNextWeek\FindFlightsForNextWeek;
 use App\Domain\Event\Query\FindFlightsForNextWeek\FindFlightsForNextWeekHandler;
+use App\Domain\Event\Query\FindStandByForNextWeek\FindStandByForNextWeek;
+use App\Domain\Event\Query\FindStandByForNextWeek\FindStandByForNextWeekHandler;
 use App\Domain\Event\Services\Command\Interfaces\HtmlEventParserInterface;
 use App\Infrastructure\Command\Parsing\CrewConnexHtmlEventParser;
 use Illuminate\Support\ServiceProvider;
@@ -65,7 +69,10 @@ class AppServiceProvider extends ServiceProvider
 
         $queryBus->register([
             FindEventsByDateRange::class => FindEventsByDateRangeHandler::class,
-            FindFlightsForNextWeek::class => FindFlightsForNextWeekHandler::class
+            FindEventsByDateRange::class => FindEventsByDateRangeHandler::class,
+            FindFlightsByStartLocation::class => FindFlightsByStartLocationHandler::class,
+            FindFlightsForNextWeek::class => FindFlightsForNextWeekHandler::class,
+            FindStandByForNextWeek::class => FindStandByForNextWeekHandler::class
         ]);
     }
 }
