@@ -41,7 +41,7 @@ class GetFlightsServiceTest extends TestCase
 
         $this->queryBusMock->expects($this->once())
             ->method('ask')
-            ->with($this->callback(function($query) use ($startLocation) {
+            ->with($this->callback(function ($query) use ($startLocation) {
                 return $query instanceof FindFlightsByStartLocation &&
                     $query->startLocation === $startLocation;
             }))
@@ -51,5 +51,4 @@ class GetFlightsServiceTest extends TestCase
 
         $this->assertEquals($expectedResult, $result, 'The returned array of flights should match the expected result');
     }
-
 }

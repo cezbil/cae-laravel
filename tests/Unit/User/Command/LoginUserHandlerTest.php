@@ -2,8 +2,6 @@
 
 namespace Tests\Unit\User\Command;
 
-use App\Domain\Event\Command\User\CreateUser;
-use App\Domain\Event\Command\User\CreateUserHandler;
 use App\Domain\Event\Command\User\LoginUser;
 use App\Domain\Event\Command\User\LoginUserHandler;
 use App\Models\User;

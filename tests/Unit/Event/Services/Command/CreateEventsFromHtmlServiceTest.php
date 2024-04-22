@@ -3,7 +3,6 @@
 namespace Event\Services\Command;
 
 use App\Domain\Bus\Command\CommandBus;
-use App\Domain\Event\Command\CreateEvent\CreateEvent;
 use App\Domain\Event\Command\CreateEventsFromHtml\CreateEventsFromHtml;
 use App\Domain\Event\Services\Command\CreateEventsFromHtmlService;
 use PHPUnit\Framework\TestCase;
@@ -22,9 +21,9 @@ class CreateEventsFromHtmlServiceTest extends TestCase
     public function testCreateEventsDispatchesCommand()
     {
         $eventsData = [
-            ['date'     => '2022-01-01',
+            ['date' => '2022-01-01',
              'location' => 'JFK',
-             'type'     => 'Departure'
+             'type' => 'Departure'
             ],
             ['date' => '2022-01-02', 'location' => 'LAX', 'type' => 'Arrival']
         ];

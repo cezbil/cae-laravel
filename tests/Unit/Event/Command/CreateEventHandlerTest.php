@@ -18,7 +18,7 @@ class CreateEventHandlerTest extends TestCase
         $mockRepo = $this->createMock(EventRepository::class);
         $mockRepo->expects($this->once())
             ->method('save')
-            ->with($this->callback(function($event) {
+            ->with($this->callback(function ($event) {
                 return $event->duty_code === 'D123';
             }));
         // Create a command with sample data

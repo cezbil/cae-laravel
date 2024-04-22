@@ -2,8 +2,6 @@
 
 namespace Bus\Query;
 
-use App\Domain\Bus\Command\Command;
-use App\Domain\Bus\Command\CommandBus;
 use App\Domain\Bus\Query\Query;
 use App\Domain\Bus\Query\QueryBus;
 use Illuminate\Bus\Dispatcher;

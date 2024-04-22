@@ -2,8 +2,6 @@
 
 namespace Event\Command;
 
-use App\Domain\Event\Command\CreateEvent\CreateEvent;
-use App\Domain\Event\Command\CreateEvent\CreateEventHandler;
 use App\Domain\Event\Command\CreateEventsFromHtml\CreateEventsFromHtml;
 use App\Domain\Event\Command\CreateEventsFromHtml\CreateEventsFromHtmlHandler;
 use App\Domain\Event\Models\Event;
@@ -22,19 +20,19 @@ class CreateEventsFromHtmlHandlerTest extends TestCase
         $counter = 0;
         $mockRepo->expects($this->exactly(3))
             ->method('save')
-            ->with($this->callback(function($event) use (&$counter)
-            {
-                $counter++;
-                if ($counter === 1){
-                    return $event->duty_code === 'D123';
-                }
-                if ($counter === 2){
-                    return $event->duty_code === 'D456';
-                }
-                if ($counter === 3){
-                    return $event->duty_code === 'D789';
-                }
-            })
+            ->with(
+                $this->callback(function ($event) use (&$counter) {
+                    $counter++;
+                    if ($counter === 1) {
+                        return $event->duty_code === 'D123';
+                    }
+                    if ($counter === 2) {
+                        return $event->duty_code === 'D456';
+                    }
+                    if ($counter === 3) {
+                        return $event->duty_code === 'D789';
+                    }
+                })
             );
 
         $eventsData = [

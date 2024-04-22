@@ -4,8 +4,8 @@ namespace Infrastructure\Command\Parsing;
 
 use App\Domain\Event\Models\Event;
 use App\Infrastructure\Command\Parsing\CrewConnexHtmlEventParser;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Http\UploadedFile;
 use Tests\CreatesApplication;
 
 class CrewConnexHtmlEventParserTest extends BaseTestCase
@@ -49,7 +49,6 @@ class CrewConnexHtmlEventParserTest extends BaseTestCase
     }
     public function testItThrowsExceptionForInvalidDateFormat()
     {
-
         $uploadedFile = new UploadedFile(
             path: __DIR__ . '/Resources/sample-malformed-time.html',
             originalName: 'sample-malformed-time.html',
@@ -67,7 +66,6 @@ class CrewConnexHtmlEventParserTest extends BaseTestCase
     }
     public function testItThrowsExceptionNoContentRuntimeException(): void
     {
-
         $uploadedFile = new UploadedFile(
             path: __DIR__ . '/Resources/nothing.html',
             originalName: 'nothing.html',
@@ -83,5 +81,4 @@ class CrewConnexHtmlEventParserTest extends BaseTestCase
 
         $parser->parse($uploadedFile);
     }
-
 }

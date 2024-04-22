@@ -28,7 +28,7 @@ class CreateUserHandlerTest extends TestCase
         $this->assertDatabaseHas('users', [
             'email' => $data['email']
         ]);
-        self::assertSame($userResponse->getContent() , json_encode([
+        self::assertSame($userResponse->getContent(), json_encode([
             'message' => 'User Created',
         ]));
     }

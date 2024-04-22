@@ -14,6 +14,4 @@ interface EventRepositoryInterface
     public function findFlightsNextWeek(): array;
     public function findStandByNextWeek(): array;
     public function findFlightsByStartLocation(string $startLocation): array;
-
-
 }

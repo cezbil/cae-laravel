@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Domain\Event\Models;
 
-use App\Domain\Event\Enum\EventType;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model

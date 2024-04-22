@@ -3,9 +3,7 @@
 namespace Event\Services\Command;
 
 use App\Domain\Bus\Command\CommandBus;
-use App\Domain\Event\Command\User\CreateUser;
 use App\Domain\Event\Command\User\LoginUser;
-use App\Domain\Event\Services\Command\CreateUserService;
 use App\Domain\Event\Services\Command\LoginUserService;
 use PHPUnit\Framework\TestCase;
 

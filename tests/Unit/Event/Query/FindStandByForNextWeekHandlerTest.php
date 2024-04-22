@@ -2,12 +2,6 @@
 
 namespace Event\Query;
 
-use App\Domain\Event\Query\FindEventsByDateRange\FindEventsByDateRange;
-use App\Domain\Event\Query\FindEventsByDateRange\FindEventsByDateRangeHandler;
-use App\Domain\Event\Query\FindFlightsByStartLocation\FindFlightsByStartLocation;
-use App\Domain\Event\Query\FindFlightsByStartLocation\FindFlightsByStartLocationHandler;
-use App\Domain\Event\Query\FindFlightsForNextWeek\FindFlightsForNextWeek;
-use App\Domain\Event\Query\FindFlightsForNextWeek\FindFlightsForNextWeekHandler;
 use App\Domain\Event\Query\FindStandByForNextWeek\FindStandByForNextWeek;
 use App\Domain\Event\Query\FindStandByForNextWeek\FindStandByForNextWeekHandler;
 use App\Domain\Event\Repositories\EventRepository;
@@ -40,5 +34,4 @@ class FindStandByForNextWeekHandlerTest extends TestCase
 
         $this->assertEquals($expectedResult, $result, 'The handler should return the correct standby events for the next week.');
     }
-
 }
